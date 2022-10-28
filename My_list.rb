@@ -1,4 +1,4 @@
-require './My_enumreable'
+require './enumreable'
 include MyEnumerable
 class Mylist
   def initialize(*list)
