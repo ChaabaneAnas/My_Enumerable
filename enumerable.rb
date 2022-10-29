@@ -1,23 +1,23 @@
-module MyEnumerable
-    def myList
-      @list ||= []
-    end
-  
-    def all?
-      verif = []
-      myList.each {|e| verif.push(e) if yield(e) }
-      puts myList.length == verif.length
-    end
-  
-    def any?
-      verif = []
-      myList.each {|e| verif.push(e) if yield(e)}
-      puts !verif.empty?
-    end
-  
-    def filter? 
-      verif = []
-      myList.each {|e| verif.push(e) if yield(e)}
-      print verif
-    end
+module Enumerable
+  def my_list
+    @my_list ||= []
+  end
+
+  def all?
+    verif = []
+    my_list.each { |e| verif.push(e) if yield(e) }
+    puts my_list.length == verif.length
+  end
+
+  def any?
+    verif = []
+    my_list.each { |e| verif.push(e) if yield(e) }
+    puts !verif.empty?
+  end
+
+  def filter?
+    verif = []
+    my_list.each { |e| verif.push(e) if yield(e) }
+    print verif
+  end
 end
